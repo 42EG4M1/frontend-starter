@@ -1,0 +1,18 @@
+// ====================
+// * _top
+// ====================
+
+.p-top {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: $width-mid;
+  margin: 0 auto;
+  &__text {
+
+  }
+  &__text--sass {
+    &::before {
+      content: "Hello, sass.";
+    }
+  }
+}

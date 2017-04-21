@@ -1,0 +1,90 @@
+{
+  "name": "frontend-starter",
+  "version": "0.0.1",
+  "description": "My front-end starter kit. babel webpack sass",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/42EG4M1/frontend-starter.git"
+  },
+  "author": "Tatsuya Azegami",
+  "license": "MIT",
+  "scripts": {
+    "build:ejs": "ejs-cli --base-dir src/ejs \"*.ejs\" --out dist/",
+    "build:sass": "node-sass src/styles/all.scss dist/styles/bundle.min.css",
+    "build:postcss": "postcss dist/styles/*.css --no-map --use autoprefixer -b \"last 2 versions\" --use csswring --output dist/styles/*.css",
+    "build:css": "npm run build:sass && npm run build:postcss",
+    "build:webpack": "webpack",
+    "build:clean": "rimraf dist && mkdirp dist/styles dist/scripts",
+    "build": "npm-run-all -s build:clean -p build:ejs build:css build:webpack",
+    "dev:ejs": "ejs-cli --base-dir src/ejs \"*.ejs\" --out dist/",
+    "dev:sass": "node-sass src/styles/all.scss dist/styles/bundle.min.css --output-style expanded",
+    "dev:postcss": "postcss dist/styles/*.css --use autoprefixer -b \"last 2 versions\" --output dist/styles/*.css",
+    "dev:css": "npm run dev:sass && npm run dev:postcss",
+    "dev:webpack": "webpack --config webpack.config.dev.js",
+    "dev:mkdir": "mkdirp dist/styles dist/scripts",
+    "dev": "npm-run-all -s dev:mkdir -p dev:ejs dev:css dev:webpack",
+    "watch:ejs": "onchange \"src/ejs/**/*\" -- npm run dev:ejs",
+    "watch:css": "onchange \"src/styles/**/*\" -- npm run dev:css",
+    "watch:js": "onchange \"src/scripts/**/*\" -- npm run dev:webpack",
+    "watch": "npm-run-all -p watch:ejs watch:css watch:js",
+    "server": "browser-sync start --server dist --files \"./dist/**/*\"",
+    "start": "npm run dev & npm run watch & npm run server",
+    "lint": "eslint src/scripts"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.4.0",
+    "browser-sync": "^2.18.8",
+    "cpx": "^1.5.0",
+    "csswring": "^5.1.1",
+    "ejs-cli": "^2.0.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.1.3",
+    "eslint-plugin-import": "^2.2.0",
+    "mkdirp": "^0.5.1",
+    "node-sass": "^4.5.2",
+    "npm-run-all": "^4.0.2",
+    "onchange": "^3.2.1",
+    "postcss-cli": "^3.1.1",
+    "rimraf": "^2.6.1",
+    "webpack": "^2.3.3"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "last 2 versions"
+            ]
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      [
+        "transform-runtime",
+        {
+          "helpers": false
+        }
+      ]
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-base"
+    ],
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "parserOptions": {
+      "sourceType": "module"
+    }
+  }
+}
