@@ -1,5 +1,6 @@
-const path    = require('path');
+const path = require('path');
 const webpack = require('webpack');
+const saveLicense = require('uglify-save-license');
 
 module.exports = {
   entry: {
@@ -17,7 +18,7 @@ module.exports = {
         warnings: false
       },
       output: {
-        comments: false
+        comments: saveLicense
       }
     })
   ],
