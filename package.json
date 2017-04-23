@@ -15,7 +15,7 @@
     "build:postcss": "postcss dist/styles/*.css --no-map --use autoprefixer -b \"last 2 versions\" --use csswring --output dist/styles/*.css",
     "build:css": "npm run build:sass && npm run build:postcss",
     "build:webpack": "webpack",
-    "build:clean": "rimraf dist && mkdirp dist/styles dist/scripts",
+    "build:clean": "npm run clean && mkdirp dist/styles dist/scripts",
     "build": "npm-run-all -s build:clean -p build:ejs build:css build:webpack",
     "dev:ejs": "ejs-cli --base-dir src/ejs \"*.ejs\" --out dist/",
     "dev:sass": "node-sass src/styles/all.scss dist/styles/bundle.min.css --output-style expanded",
@@ -30,7 +30,8 @@
     "watch": "npm-run-all -p watch:ejs watch:css watch:js",
     "server": "browser-sync start --server dist --files \"./dist/**/*\"",
     "start": "npm run dev & npm run watch & npm run server",
-    "lint": "eslint src/scripts"
+    "lint": "eslint src/scripts",
+    "clean": "rimraf dist"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.7",
@@ -39,7 +40,6 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.4.0",
     "browser-sync": "^2.18.8",
-    "cpx": "^1.5.0",
     "csswring": "^5.1.1",
     "ejs-cli": "^2.0.0",
     "eslint": "^3.19.0",

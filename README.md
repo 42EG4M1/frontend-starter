@@ -30,6 +30,7 @@ node.js
     npm run watch   # watch
     npm run lint -s # eslint
     npm run server  # browser-sync
+    npm run clean   # rm -rf dist
 
     # build
     npm run dev     # build for development
