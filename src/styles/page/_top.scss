@@ -15,4 +15,11 @@
       content: "Hello, sass.";
     }
   }
+  &__img {
+    width: 100%;
+    max-width: 400px;
+  }
+  & > * {
+    margin-bottom: 24px;
+  }
 }
