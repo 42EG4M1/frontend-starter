@@ -27,12 +27,12 @@
     "watch:ejs": "onchange \"src/ejs/**/*\" -- npm run dev:ejs",
     "watch:css": "onchange \"src/styles/**/*\" -- npm run dev:css",
     "watch:js": "onchange \"src/scripts/**/*\" -- npm run dev:webpack",
-    "watch:copy": "cpx \"src/**/*.{gif,png,jpg}\" dist --watch",
+    "watch:copy": "cpx \"src/**/*.{svg,gif,png,jpg}\" dist --watch",
     "watch": "npm-run-all -p watch:ejs watch:css watch:js watch:copy",
     "server": "browser-sync start --server dist --files \"./dist/**/*\"",
     "start": "npm run dev & npm run watch & npm run server",
     "lint": "eslint src/scripts",
-    "copy": "cpx \"src/**/*.{gif,png,jpg}\" dist",
+    "copy": "cpx \"src/**/*.{svg,gif,png,jpg}\" dist",
     "clean": "rimraf dist"
   },
   "devDependencies": {

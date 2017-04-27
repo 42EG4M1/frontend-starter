@@ -18,26 +18,15 @@
 
 .footer__sns {
   display: flex;
-  padding-bottom: 40px;
-  &-svg {
-  }
-  &-fb {
+  padding-bottom: 20px;
+  &-icon {
     width: 20px;
     height: 20px;
-    fill: $color-text-base1;
-    transition: $transition-base;
-    a:hover & {
-      fill: $color-facebook;
+    a {
+      display: block;
     }
-  }
-  &-tw {
-    width: 25px;
-    height: 20px;
-    margin-left: 16px;
-    fill: $color-text-base1;
-    transition: $transition-base;
-    a:hover & {
-      fill: $color-twitter;
+    & + * {
+      margin-left: 20px;
     }
   }
 }
