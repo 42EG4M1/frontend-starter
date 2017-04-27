@@ -31,7 +31,7 @@ node.js
     npm run lint -s # eslint
     npm run server  # browser-sync
     npm run clean   # rm -rf dist
-    npm run copy    # copy - jpg,gif,png
+    npm run copy    # copy - jpg,gif,png,svg
 
     # build
     npm run dev     # build for development
