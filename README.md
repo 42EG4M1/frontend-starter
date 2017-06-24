@@ -1,25 +1,20 @@
-# Front-end Starter
-
-Front-end starter kit.
-
-babel, webpack, sass, ejs
+# web-starter-ejs
+My static website starter kit.  
+babel, webpack, sass and ejs.
 
 
 ## Require
-
 node.js
 
 
 ## Getting Started
-
-    $ git clone git@github.com:42EG4M1/frontend-starter.git [projectName]
+    $ git clone git@github.com:42EG4M1/web-starter-ejs.git [projectName]
     $ cd [projectName]
     $ npm i
     $ npm run dev
 
 
 ## Development
-
     # package
     npm i           # install npm packages
 
@@ -38,6 +33,15 @@ node.js
     npm run build   # build for production
 
 
-## License
+## commit message
+    Fix    - Bug fixes.
+    Add    - Add a new files and functions.
+    Modify - Fixing features that are not bugs.
+    Clean  - Organize by refactoring etc.
+    Remove - Delete files.
+    Rename - Rename files.
+    Update - Update files.
 
+
+## License
 MIT License

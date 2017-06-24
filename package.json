@@ -1,11 +1,11 @@
 {
-  "name": "frontend-starter",
+  "name": "web-starter-ejs",
   "version": "0.0.1",
-  "description": "My front-end starter kit. babel webpack sass ejs",
+  "description": "My static website starter kit. babel, webpack, sass and ejs.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/42EG4M1/frontend-starter.git"
+    "url": "git+https://github.com/42EG4M1/web-starter-ejs.git"
   },
   "author": "Tatsuya Azegami",
   "license": "MIT",
