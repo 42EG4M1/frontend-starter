@@ -28,7 +28,7 @@
     "watch:copy": "cpx \"src/**/*.{svg,gif,png,jpg,html}\" dist --watch",
     "server": "browser-sync start --server dist --files \"./dist/**/*\"",
     "lint": "eslint src/js",
-    "copy": "cpx \"src/**/*.{svg,gif,png,jpg}\" dist",
+    "copy": "cpx \"src/**/*.{svg,gif,png,jpg,html}\" dist",
     "mkdir": "mkdirp dist/css dist/js",
     "clean": "rimraf dist"
   },
