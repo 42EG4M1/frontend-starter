@@ -22,7 +22,6 @@ menu, nav, output, ruby, section, summary, time, mark, audio, video, main {
 article, aside, details, figcaption, figure,
 footer, header, menu, nav, section, main, summary {
   display: block;
-  margin: 0;
 }
 
 body {
@@ -126,4 +125,3 @@ input[type="submit"] {
   cursor: pointer;
   font-size: 13px;
 }
-

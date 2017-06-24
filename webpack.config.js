@@ -4,31 +4,31 @@ const saveLicense = require('uglify-save-license');
 
 module.exports = {
   entry: {
-    bundle: path.join(__dirname, 'src/scripts/main.js'),
+    bundle: path.join(__dirname, 'src/js/main.js'),
   },
   output: {
-    path: path.join(__dirname, 'dist/scripts'),
-    filename: '[name].min.js'
+    path: path.join(__dirname, 'dist/js'),
+    filename: '[name].min.js',
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
       minimize: true,
       sourceMap: false,
       compressor: {
-        warnings: false
+        warnings: false,
       },
       output: {
-        comments: saveLicense
-      }
-    })
+        comments: saveLicense,
+      },
+    }),
   ],
   module: {
     rules: [
       {
         test: /\.js$/,
         use: 'babel-loader',
-        exclude: /node_modules/
-      }
-    ]
-  }
+        exclude: /node_modules/,
+      },
+    ],
+  },
 };
