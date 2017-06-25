@@ -1,6 +1,8 @@
 # web-starter-ejs
 My static website starter kit.  
-babel, webpack, sass and ejs.
+babel, webpack, sass and ejs.  
+
+Sample : [https://42eg4m1.github.io/web-starter-ejs/](https://42eg4m1.github.io/web-starter-ejs/)
 
 
 ## Require
