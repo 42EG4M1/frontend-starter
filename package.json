@@ -11,7 +11,7 @@
   "license": "MIT",
   "scripts": {
     "start": "npm-run-all dev -p watch server",
-    "build": "npm-run-all clean mkdir build:sass build:postcss -p build:ejs build:webpack copy",
+    "build": "npm-run-all clean mkdir build:sass build:postcss -p build:ejs build:webpack copy -s docs",
     "build:ejs": "ejs-cli --base-dir src/ejs \"*.ejs\" --out dist/",
     "build:sass": "node-sass src/scss/all.scss dist/css/bundle.min.css",
     "build:postcss": "postcss dist/css/*.css --no-map --use autoprefixer -b \"last 2 versions\" --use csswring --output dist/css/*.css",
@@ -30,6 +30,7 @@
     "lint": "eslint src/js",
     "copy": "cpx \"src/**/*.{svg,gif,png,jpg,html}\" dist",
     "mkdir": "mkdirp dist/css dist/js",
+    "docs": "cpx \"dist/**/*\" docs",
     "clean": "rimraf dist"
   },
   "devDependencies": {
